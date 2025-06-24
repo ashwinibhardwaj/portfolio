@@ -1,0 +1,320 @@
+* {
+      scroll-behavior: smooth;
+    }
+
+    .perspective-3d {
+      perspective: 1000px;
+    }
+
+    #rotating-icon {
+      margin-top: 40px;
+      transform-style: preserve-3d;
+    }
+
+    .custom-scroll::-webkit-scrollbar {
+    width: 22px;
+  }
+
+  .custom-scroll::-webkit-scrollbar-track {
+    background: #2d2d2d;
+    border-radius: 8px;
+  }
+
+  .custom-scroll::-webkit-scrollbar-thumb {
+    background-color: #14b8a6; /* Tailwind teal-500 */
+    border-radius: 8px;
+    border: 2px solid #2d2d2d;
+  }
+
+  .custom-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #14b8a6 #2d2d2d;
+  }
+
+  .perspective-3d {
+    perspective: 800px;
+  }
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+ 
+
+  #lottie-inner {
+    /* Floating animation */
+     position: relative;
+  }
+
+
+  /* Reuse float from earlier */
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotateX(0) rotateY(0); }
+    50%      { transform: translateY(-8px) rotateX(0) rotateY(0); }
+  }
+
+  .animate-float1{
+    animation: float 6s infinite;
+  }
+
+  @keyframes blink { 0%, 50% { opacity: 1 } 51%, 100% { opacity: 0 } }
+  .animate-blink { animation: blink 1s infinite; }
+
+  #code-window {
+  position: absolute;
+  top: -10px;
+  left: -80px;
+  width: 120px;
+  height: 80px;
+  padding: 6px;
+  background: rgba(17, 24, 39, 0.9);
+  color: #4ade80;
+  font-family: monospace;
+  font-size: 0.45rem;
+  text-align: left;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  transform-origin: top right;
+  transform:
+    perspective(400px)
+    rotateX(-10deg)    /* slight forward tilt */
+    rotateY(48deg)
+    rotateZ(-3deg);
+}
+
+  #code-content { margin: 0; white-space: pre-wrap; }
+
+
+
+  /* skills section background */
+
+   .bubble {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.25;
+    backdrop-filter: blur(12px);
+    animation: float 16s ease-in-out infinite;
+    z-index: 0;
+  }
+
+ @keyframes float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(-20px, 15px) scale(1.05);
+  }
+  50% {
+    transform: translate(15px, -20px) scale(0.95);
+  }
+  75% {
+    transform: translate(-10px, -15px) scale(1.02);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+
+  .bubble:nth-child(1) {
+    width: 60px; height: 60px;
+    top: 10%; left: 5%;
+    background: radial-gradient(circle, #14b8a6, transparent);
+    box-shadow: 0 0 40px #14b8a6;
+    animation-delay: 0s;
+  }
+
+  .bubble:nth-child(2) {
+    width: 50px; height: 50px;
+    top: 25%; left: 80%;
+    background: radial-gradient(circle, #a855f7, transparent);
+    box-shadow: 0 0 30px #a855f7;
+    animation-delay: 1s;
+  }
+
+  .bubble:nth-child(3) {
+    width: 55px; height: 55px;
+    bottom: 15%; right: 10%;
+    background: radial-gradient(circle, #ec4899, transparent);
+    box-shadow: 0 0 35px #ec4899;
+    animation-delay: 2s;
+  }
+
+  .bubble:nth-child(4) {
+    width: 45px; height: 45px;
+    top: 50%; left: 40%;
+    background: radial-gradient(circle, #6366f1, transparent);
+    box-shadow: 0 0 30px #6366f1;
+    animation-delay: 3s;
+  }
+
+  .bubble:nth-child(5) {
+    width: 70px; height: 70px;
+    bottom: 25%; left: 20%;
+    background: radial-gradient(circle, #f59e0b, transparent);
+    box-shadow: 0 0 45px #f59e0b;
+    animation-delay: 4s;
+  }
+
+  .bubble:nth-child(6) {
+    width: 40px; height: 40px;
+    top: 30%; right: 25%;
+    background: radial-gradient(circle, #22d3ee, transparent);
+    box-shadow: 0 0 25px #22d3ee;
+    animation-delay: 5s;
+  }
+
+  .bubble:nth-child(7) {
+    width: 65px; height: 65px;
+    bottom: 10%; left: 65%;
+    background: radial-gradient(circle, #e11d48, transparent);
+    box-shadow: 0 0 40px #e11d48;
+    animation-delay: 2.5s;
+  }
+
+  .bubble:nth-child(8) {
+    width: 35px; height: 35px;
+    top: 20%; right: 10%;
+    background: radial-gradient(circle, #38bdf8, transparent);
+    box-shadow: 0 0 20px #38bdf8;
+    animation-delay: 3.8s;
+  }
+
+  .bubble:nth-child(9) {
+    width: 58px; height: 58px;
+    bottom: 30%; right: 30%;
+    background: radial-gradient(circle, #4ade80, transparent);
+    box-shadow: 0 0 35px #4ade80;
+    animation-delay: 1.7s;
+  }
+
+  .bubble:nth-child(10) {
+    width: 48px; height: 48px;
+    top: 45%; left: 70%;
+    background: radial-gradient(circle, #8b5cf6, transparent);
+    box-shadow: 0 0 30px #8b5cf6;
+    animation-delay: 6s;
+  }
+
+
+  .skill-badge {
+  position: relative;
+  width: auto;
+  padding: 0.75rem 1.2rem;
+  background: #636363;
+  color: white;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.skill-badge img {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.skill-badge:hover {
+  transform: scale(1.05);
+}
+
+.skill-badge::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  clip-path: inherit;
+  background: inherit;
+  animation: pulse 3s infinite;
+  opacity: 0.4;
+  z-index: -1;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.1); opacity: 0.6; }
+}
+
+
+@keyframes gradient-move {
+  0% {
+    transform: translate(-60%, -60%) scale(1);
+    background-position: 0% 50%;
+  }
+  25% {
+    transform: translate(-50%, -70%) scale(1.05);
+    background-position: 50% 0%;
+  }
+  50% {
+    transform: translate(-40%, -60%) scale(1.1);
+    background-position: 100% 50%;
+  }
+  75% {
+    transform: translate(-50%, -50%) scale(1.05);
+    background-position: 50% 100%;
+  }
+  100% {
+    transform: translate(-60%, -60%) scale(1);
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-move {
+  background-size: 300% 300%;
+  animation: gradient-move 5s ease-in-out infinite;
+  left: 50%;
+  top: 50%;
+  filter: blur(40px);
+
+}
+
+
+
+
+
+
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Optional: Hover Glow */
+.skill-card:hover .animate-float {
+  filter: drop-shadow(0 0 8px #38bdf8);
+}
+
+
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s infinite;
+}
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+}

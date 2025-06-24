@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Ashwini Bhardwaj</title>
+  <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="shortcut icon" href="assets/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="assets/site.webmanifest" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #1a202c; /* gray-900 */
+    }
+    iframe {
+      width: 100%;
+      max-width: 850px;
+      height: 600px;
+      border: none;
+    }
+  </style>
+</head>
+<body class="text-white flex flex-col min-h-screen">
+
+  <!-- Header -->
+<header class="w-full fixed top-0 z-50 bg-gray-900 bg-opacity-90 backdrop-blur shadow-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-auto sm:h-16 py-3 sm:py-0">
+
+      <!-- Left Section: Logo and Badge -->
+      <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+
+        <!-- Logo -->
+        <div class="text-teal-500 tracking-widest font-bold uppercase text-lg sm:text-xl hover:tracking-[0.3em] transition-all duration-300 text-base sm:text-lg md:text-xl">
+          RESUME
+        </div>
+
+        <!-- Badge -->
+        <span class="inline-block text-[8px] sm:text-[10px] md:text-sm text-teal-400 bg-teal-300/10 px-2 sm:px-3 md:px-4 py-1 rounded-full tracking-wider font-semibold uppercase text-center">
+          AI · ML · Solutions
+        </span>
+
+      </div>
+
+      <!-- Profile Picture (Always on Right) -->
+      <div class="relative">
+        <img src="assets/img2.jpg" alt="Profile Picture" id="profilePic" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300">
+      </div>
+
+    </div>
+  </div>
+</header>
+
+  <!-- Resume Viewer -->
+  <div class="flex flex-col items-center justify-center flex-grow p-4 overflow-hidden mt-20">
+
+    <!-- PDF iframe with zoom control -->
+    <iframe src="assets/Ashwini_Bhardwaj_AI_ML_Resume.pdf#zoom=35" class="rounded-lg shadow-lg w-full max-w-[550px] h-[600px]"></iframe>
+
+    <!-- Download Button -->
+    <a href="assets/Ashwini_Bhardwaj_AI_ML_Resume.pdf" download class="mt-6 px-5 py-2 bg-teal-500 text-white text-sm sm:text-base font-medium rounded hover:bg-teal-600 transition duration-300 shadow">
+      📥 Download Resume
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
