@@ -111,7 +111,7 @@ AOS.init({ duration: 1000, once: false });
 
 
 
-    // ✅ Enable swipe gestures here
+    // Enable swipe gestures here
     enableTouchSwipe("academic-carousel", showSlide, 2, "currentSlide");
     enableTouchSwipe("cert-carousel", showCertSlide, 3, "currentCertSlide");
 
@@ -223,5 +223,5 @@ AOS.init({ duration: 1000, once: false });
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-KMBFQ2GHRM');
+  gtag('config', 'G-VS05EJC9LN');
 });
