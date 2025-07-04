@@ -217,11 +217,4 @@ AOS.init({ duration: 1000, once: false });
     buttonLoader.classList.add('hidden');
     submitBtn.disabled = false;
   });
-
-  // google analytics
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VS05EJC9LN');
 });
