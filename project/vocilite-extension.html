@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VS05EJC9LN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-VS05EJC9LN');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vocilite — Chrome extension that simplifies and reads aloud highlighted text using LLMs.">
+  <title>Vocilite · Ashwini Bhardwaj</title>
+
+  <link rel="icon" type="image/png" href="../static/assets/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../static/assets/favicon.svg" />
+  <link rel="shortcut icon" href="../static/assets/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../static/assets/apple-touch-icon.png" />
+  <link rel="manifest" href="../static/assets/site.webmanifest" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../static/base.js" defer></script>
+  <script src="../static/script.js" defer></script>
+</head>
+<body>
+<canvas id="fog"></canvas>
+<main id="project-main">
+  <div class="container">
+    <div class="project-hero fade">
+      <div class="project-hero-inner">
+        <div class="tags" style="margin-bottom:20px">
+          <span class="tag">Chrome Extension</span>
+          <span class="tag">LLM</span>
+          <span class="tag">LangChain</span>
+          <span class="tag">Flask</span>
+          <span class="tag">Groq</span>
+        </div>
+        <h1>Vocilite</h1>
+        <h2>Chrome Extension</h2>
+        <p>AI-powered Chrome extension that explains highlighted text in simple terms and reads it aloud—like a personal tutor on any webpage.</p>
+        <div class="project-meta">
+          <div class="project-meta-item">
+            <span class="project-meta-label">Published</span>
+            <span class="project-meta-value">JUL 2025</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="project-meta-label">Category</span>
+            <span class="project-meta-value">Browser Extension / AI</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="project-meta-label">Status</span>
+            <span class="project-meta-value" style="color:var(--amber)">● Completed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-layout">
+      <div class="project-content fade">
+        <h2>Overview</h2>
+        <p>
+          Vocilite is an AI-powered Chrome extension designed to improve comprehension and accessibility
+          while browsing. Users can highlight any text on a webpage and instantly receive a simplified
+          explanation along with an audio narration, making it easier to understand complex information.
+        </p>
+
+        <h2>How It Works</h2>
+        <ul>
+          <li><strong>Text Selection:</strong> User highlights text on any webpage</li>
+          <li><strong>Processing:</strong> Extension sends text to backend API</li>
+          <li><strong>LLM Explanation:</strong> LLaMA 3 (via Groq) generates simplified explanation</li>
+          <li><strong>Speech Output:</strong> Converts explanation into audio using TTS</li>
+          <li><strong>Delivery:</strong> Plays output instantly in the browser</li>
+        </ul>
+
+        <h2>Technical Architecture</h2>
+        <ul>
+          <li>Chrome Extension APIs for frontend interaction</li>
+          <li>Flask backend for request handling</li>
+          <li>LangChain for prompt orchestration and workflow management</li>
+          <li>Groq (LLaMA 3) for fast LLM inference</li>
+          <li>Text-to-Speech integration for audio output</li>
+        </ul>
+
+        <h2>Key Features</h2>
+        <ul>
+          <li>Instant simplification of complex text</li>
+          <li>Real-time audio narration</li>
+          <li>Works across any website</li>
+          <li>Fast response using Groq-powered inference</li>
+          <li>Improves accessibility and learning efficiency</li>
+        </ul>
+
+        <h2>Results & Impact</h2>
+        <p>
+          Vocilite enhances digital learning by making content more accessible and easier to understand.
+          It is especially useful for students, professionals, and anyone dealing with complex or unfamiliar topics,
+          acting as an always-available AI tutor directly in the browser.
+        </p>
+      </div>
+
+      <div class="project-sidebar fade fade-delay-1">
+        <div class="sidebar-card">
+          <h4>Tech Stack</h4>
+          <div class="tags" style="gap:8px">
+            <span class="tag">Chrome Extension</span>
+            <span class="tag">LangChain</span>
+            <span class="tag">Flask</span>
+            <span class="tag">Groq</span>
+            <span class="tag">LLM</span>
+            <span class="tag tag-neutral">TTS</span>
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>Links</h4>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <a href="https://github.com/ashwinibhardwaj/TextExplainer_Vocilite" target="_blank" class="btn btn-primary" style="justify-content:center;font-size:0.82rem">
+              View on GitHub
+            </a>
+            <a href="../projects.html" class="btn btn-outline" style="justify-content:center;font-size:0.82rem">← All Projects</a>
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>Project Stats</h4>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div>
+              <div style="font-family:var(--mono);font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px">Latency</div>
+              <div style="color:var(--amber);font-size:1.2rem;font-family:var(--serif);font-weight:700">&lt; 1s</div>
+            </div>
+            <div>
+              <div style="font-family:var(--mono);font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px">User Experience</div>
+              <div style="font-size:1rem;font-weight:600;color:var(--text)">Seamless</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+  });
+</script>
+
+</body>
+</html>

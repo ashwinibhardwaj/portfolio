@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VS05EJC9LN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-VS05EJC9LN');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vocilite a Chrome extension that explains text and reads it aloud.">
+  <title>Vocilite · Ashwini Bhardwaj</title>
+
+  <link rel="icon" type="image/png" href="../static/assets/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../static/assets/favicon.svg" />
+  <link rel="shortcut icon" href="../static/assets/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../static/assets/apple-touch-icon.png" />
+  <link rel="manifest" href="../static/assets/site.webmanifest" />
+
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../static/base.js" defer></script>
+  <script src="../static/script.js" defer></script>
+</head>
+
+<body>
+
+<main id="blog-main">
+  <div class="container" style="padding-top:80px;color:var(--muted)">Loading…</div>
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+  const main = document.getElementById("blog-main");
+
+  main.innerHTML = `
+    <div class="container">
+      <div class="blog-hero fade">
+
+        <div class="tags" style="margin-bottom:20px">
+          <span class="tag">AI</span>
+          <span class="tag">Side Project</span>
+          <span class="tag">LLM</span>
+        </div>
+
+        <h2>Vocilite: Simple Text Explanations with Voice</h2>
+
+        <p style="font-size:1.1rem;color:var(--muted2);margin:16px 0 28px;line-height:1.7">
+          I built a Chrome extension that explains complex text in plain English and reads it out loud.
+        </p>
+
+        <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap">
+          <span class="reading-time">July 13, 2025 · 5 min read</span>
+        </div>
+
+      </div>
+
+      <div class="blog-content fade">
+
+        <p>
+          This started pretty casually. I was reading through a technical article packed with dense terms,
+          and I kept breaking my flow just to look things up.
+        </p>
+
+        <p>
+          At some point, I caught myself thinking
+          <em>why isn’t there something that just explains this instantly, right here?</em>
+        </p>
+
+        <p>
+          That thought turned into <strong>Vocilite</strong>.
+        </p>
+
+        <h2>📖 The Idea</h2>
+        <p>
+          The goal wasn’t to build something complex. It was to remove friction.
+          I wanted a way to highlight any piece of text and instantly understand it without leaving the page.
+        </p>
+
+        <p>
+          And then I thought if it can explain, why not also speak?
+        </p>
+
+        <h2>💻 Building It Out</h2>
+        <p>
+          What started simple quickly became a system:
+        </p>
+
+        <ul>
+          <li>Capture highlighted text from any webpage</li>
+          <li>Send it to a backend for processing</li>
+          <li>Generate a clean explanation using an LLM</li>
+          <li>Return and display it instantly</li>
+          <li>Optionally read it aloud</li>
+        </ul>
+
+        <p>
+          The tricky part wasn’t getting it to work it was making it feel smooth.
+        </p>
+
+        <h2>⚙️ Stack</h2>
+        <ul>
+          <li>Chrome Extension (frontend layer)</li>
+          <li>Flask backend</li>
+          <li>LangChain orchestration</li>
+          <li>Groq + LLaMA 3 for generation</li>
+          <li>Web Speech API for voice</li>
+        </ul>
+
+        <h2>💡 What Made It Interesting</h2>
+        <p>
+          The biggest challenge wasn’t AI it was polish.
+        </p>
+
+        <ul>
+          <li>Cleaning output so speech sounds natural</li>
+          <li>Keeping explanations short but useful</li>
+          <li>Making the UI feel invisible, not intrusive</li>
+          <li>Handling edge cases in real-world text</li>
+        </ul>
+
+        <blockquote>
+          Small UX details matter more than model quality in tools like this.
+        </blockquote>
+
+        <h2>🔍 What I Learned</h2>
+        <p>
+          This project made one thing clear:
+          building AI features is easy building something people actually want to use is harder.
+        </p>
+
+        <p>
+          The real work is in shaping the experience not just generating output.
+        </p>
+
+        <h2>📂 Project</h2>
+        <p>
+          You can explore it here:
+          <a href="https://github.com/ashwinibhardwaj/TextExplainer_Vocilite" target="_blank">
+            Vocilite on GitHub
+          </a>
+        </p>
+
+        <h2>What’s Next</h2>
+        <p>
+          I’m continuing to refine it especially around voice quality and multi-language support.
+          There’s a lot more to explore here.
+        </p>
+
+      </div>
+    </div>
+  `;
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add("visible");
+    });
+  }, { threshold: 0.08 });
+
+  main.querySelectorAll('.fade').forEach(el => obs.observe(el));
+});
+</script>
+
+</body>
+</html>

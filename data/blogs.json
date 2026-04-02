@@ -1,0 +1,18 @@
+[
+  {
+    "id": "ai-sql-assistant",
+    "title": "Building the AI SQL Assistant: From Natural Language to SQL Instantly",
+    "description": "A journey into creating an intelligent SQL assistant using LLMs, LangChain, and real-time query execution.",
+    "content": "Have you ever wanted to interact with a database without writing a single line of SQL? That’s exactly what inspired the AI SQL Assistant. The idea was simple yet ambitious: allow users to type plain English queries, convert them into SQL, execute them, and return results instantly. Leveraging the power of Hugging Face LLMs and LangChain, this project transforms natural language into executable queries and even handles errors autonomously. It’s a tool for data analysts, developers, and AI enthusiasts who want to explore databases effortlessly.",
+    "tags": ["LLM", "SQL", "AI Agents", "LangChain"],
+    "date": "2025-11-01"
+  },
+
+  {
+    "id": "vocilite",
+    "title": "Vocilite: Simple Text Explanations with Voice",
+    "description": "I built a Chrome extension that explains complex text in plain English and reads it aloud - exploring LLMs, voice, and real-world usability.",
+    "date": "July 13, 2025",
+    "tags": ["AI", "Side Project", "LLM", "Product"]
+  }
+]

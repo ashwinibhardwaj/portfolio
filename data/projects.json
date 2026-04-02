@@ -1,0 +1,80 @@
+[
+  {
+    "id": "blog-writing-agent",
+    "title": "Blog Writing Agent",
+    "description": "Intelligent agent that generates detailed, high-quality blog posts from a given topic using automated research and structured workflows.",
+    "content": "Developed an end-to-end AI-powered blog writing assistant that takes a topic as input and autonomously generates comprehensive blog posts. Implemented agent workflows to perform web search, gather relevant information, and structure content into well-organized articles. Utilized LangChain and LangGraph for orchestration, enabling dynamic tool usage and multi-step reasoning. Delivered coherent, human-like writing with contextual insights and improved content quality.",
+    "tags": ["Python", "Agent", "LangChain", "LangGraph"],
+    "github_link": "#",
+    "date": "2026-02-10"
+  },
+  {
+    "id": "ai-sql-assistant",
+    "title": "AI SQL Assistant",
+    "description": "Conversational AI system that translates natural language into SQL queries and returns structured results from databases.",
+    "content": "Built an end-to-end AI assistant enabling users to query datasets in plain English. Leveraged LangChain for SQL generation and LangGraph for orchestrating agent workflows. Integrated Flask backend with MySQL for execution and result retrieval, providing human-readable insights and seamless data exploration.",
+    "tags": ["Python", "Agent","LangChain", "LangGraph", "Flask", "MySQL"],
+    "github_link": "#",
+    "date": "2025-11-01"
+  },
+
+  {
+    "id": "resume-screening-automation",
+    "title": "Resume Screening Automation",
+    "description": "End-to-end n8n workflow that automates resume screening, scoring, interview scheduling, and candidate communication.",
+    "content": "Developed an intelligent hiring automation system using n8n that continuously monitors a Google Drive folder for new resume uploads. Upon detecting a new file, the workflow extracts candidate information, evaluates it against a job description using LLM-based scoring, and determines eligibility. Candidates exceeding the threshold score are automatically scheduled for interviews by checking interviewer availability and sending confirmation emails. Those below the threshold receive automated rejection emails. The system streamlines recruitment by reducing manual effort and accelerating decision-making.",
+    "tags": ["n8n", "Automation", "LLM", "Google Drive", "Email"],
+    "github_link": "#",
+    "date": "2025-08-01"
+  },
+
+  {
+    "id": "vocilite-extension",
+    "title": "Vocilite",
+    "description": "Chrome extension that simplifies and reads aloud highlighted text using LLM-powered explanations.",
+    "content": "Developed a Chrome extension that enhances reading and comprehension by explaining highlighted text in simple language and converting it into speech. Powered by LLaMA 3 via Groq, the system generates concise, easy-to-understand explanations in real time. Integrated LangChain for prompt orchestration and a Flask backend for handling requests, enabling seamless interaction across any webpage. Designed as a personal AI tutor to improve accessibility and learning efficiency.",
+    "tags": ["Chrome Extension", "LLM", "LangChain", "Flask", "Groq", "Text-to-Speech"],
+    "github_link": "#",
+    "date": "2025-07-01"
+  },
+
+  {
+    "id": "datahelp-ai",
+    "title": "DataHelp.AI – Agentic Data Analysis Assistant",
+    "description": "Full-stack AI assistant for conversational data analysis with RAG, enabling contextual insights and interactive exploration.",
+    "content": "Developed a dataset-aware AI assistant using Retrieval-Augmented Generation with LangChain, Groq embeddings, and Hugging Face Transformers. Enabled metadata extraction, preprocessing suggestions, and intelligent insights. Integrated Pandas, Plotly, and Streamlit for real-time interactive visualizations.",
+    "tags": ["Python","RAG", "LangChain", "Groq", "HuggingFace", "Flask"],
+    "github_link": "#",
+    "date": "2025-06-01"
+  },
+
+  {
+    "id": "reddit-sentiment-analysis",
+    "title": "Reddit Sentiment Analysis",
+    "description": "NLP-based system that analyzes Reddit posts and comments to uncover sentiment trends and community insights.",
+    "content": "Developed a sentiment analysis system that processes Reddit posts and comments to understand community opinions and emerging trends. Leveraged VADER for accurate sentiment scoring on social media text and used Plotly for interactive visualizations. The system enables users to explore sentiment distribution, track topic trends, and gain actionable insights from large-scale discussions.",
+    "tags": ["Python","ML/DL", "NLP", "VADER", "Plotly", "Data Analysis"],
+    "github_link": "#",
+    "date": "2025-06-01"
+  },
+
+  {
+    "id": "stock-dashboard",
+    "title": "Stock Trends Dashboard",
+    "description": "AI-powered stock analysis platform with forecasting, RAG-based insights, and real-time personalized tracking.",
+    "content": "Built an interactive dashboard allowing users to track and subscribe to stock tickers. Implemented LSTM models to forecast short-term price movements and integrated LangChain-based RAG for AI-driven investment insights. Designed a scalable backend supporting multiple users and real-time updates.",
+    "tags": ["Python","Flask", "Keras", "LSTM", "RAG", "LangChain"],
+    "github_link": "#",
+    "date": "2025-05-01"
+  },
+
+  {
+    "id": "customer-churn-prediction",
+    "title": "Customer Churn Prediction",
+    "description": "Machine learning system that predicts customer churn and provides actionable insights for retention strategies.",
+    "content": "Developed a machine learning model to analyze customer behavior and predict churn probability. Leveraged data preprocessing, feature engineering, and classification algorithms to identify key factors influencing customer attrition. The system enables businesses to proactively retain customers by providing actionable insights and data-driven decision support.",
+    "tags": ["Python", "ML/DL", "Data Analysis", "Scikit-learn", "Pandas"],
+    "github_link": "#",
+    "date": "2025-05-01"
+  }
+]

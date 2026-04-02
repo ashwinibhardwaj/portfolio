@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VS05EJC9LN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-VS05EJC9LN');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Resume Screening Automation — n8n-based system for resume screening, scoring, and interview scheduling.">
+  <title>Resume Screening Automation · Ashwini Bhardwaj</title>
+
+  <link rel="icon" type="image/png" href="../static/assets/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../static/assets/favicon.svg" />
+  <link rel="shortcut icon" href="../static/assets/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../static/assets/apple-touch-icon.png" />
+  <link rel="manifest" href="../static/assets/site.webmanifest" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../static/base.js" defer></script>
+  <script src="../static/script.js" defer></script>
+</head>
+<body>
+<canvas id="fog"></canvas>
+<main id="project-main">
+  <div class="container">
+    <div class="project-hero fade">
+      <div class="project-hero-inner">
+        <div class="tags" style="margin-bottom:20px">
+          <span class="tag">n8n</span>
+          <span class="tag">Automation</span>
+          <span class="tag">LLM</span>
+          <span class="tag">Google Drive</span>
+          <span class="tag">Scheduling</span>
+        </div>
+        <h1>Resume Screening Automation</h1>
+        <p>Fully automated recruitment pipeline that screens resumes, scores candidates, schedules interviews, and manages communication.</p>
+        <div class="project-meta">
+          <div class="project-meta-item">
+            <span class="project-meta-label">Published</span>
+            <span class="project-meta-value">AUG 2025</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="project-meta-label">Category</span>
+            <span class="project-meta-value">Automation / Agentic Systems</span>
+          </div>
+          <div class="project-meta-item">
+            <span class="project-meta-label">Status</span>
+            <span class="project-meta-value" style="color:var(--amber)">● Completed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-layout">
+      <div class="project-content fade">
+        <h2>Overview</h2>
+        <p>
+          Built an end-to-end hiring automation workflow using n8n that eliminates manual resume screening
+          and interview coordination. The system continuously monitors a cloud storage folder for new
+          resumes and processes each candidate through an intelligent evaluation pipeline powered by LLMs.
+        </p>
+
+        <h2>Workflow Breakdown</h2>
+        <ul>
+          <li><strong>Trigger:</strong> Watches a Google Drive folder for new resume uploads</li>
+          <li><strong>Parsing:</strong> Extracts structured candidate data from resumes</li>
+          <li><strong>Evaluation:</strong> Matches candidate profile against Job Description</li>
+          <li><strong>Scoring:</strong> Uses LLM-based scoring to rank candidates</li>
+          <li><strong>Decision Logic:</strong> Compares score with threshold value</li>
+        </ul>
+
+        <h2>Automation Actions</h2>
+        <p>
+          Based on candidate evaluation, the system performs automated actions:
+        </p>
+        <ul>
+          <li><strong>Qualified Candidates:</strong>
+            <ul>
+              <li>Checks interviewer calendar availability</li>
+              <li>Schedules interview slot automatically</li>
+              <li>Sends confirmation emails to candidate and interviewer</li>
+            </ul>
+          </li>
+          <li><strong>Rejected Candidates:</strong>
+            <ul>
+              <li>Sends personalized regret email</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h2>Technical Architecture</h2>
+        <ul>
+          <li>n8n for workflow orchestration and automation</li>
+          <li>LLM integration for semantic resume evaluation and scoring</li>
+          <li>Google Drive API for file monitoring</li>
+          <li>Email APIs for automated communication</li>
+          <li>Calendar API integration for interview scheduling</li>
+        </ul>
+
+        <h2>Key Features</h2>
+        <ul>
+          <li>Fully automated recruitment pipeline</li>
+          <li>Real-time resume processing</li>
+          <li>LLM-powered candidate scoring</li>
+          <li>Automated interview scheduling</li>
+          <li>End-to-end communication handling</li>
+        </ul>
+
+        <h2>Results & Impact</h2>
+        <p>
+          This workflow significantly reduces hiring turnaround time by automating repetitive tasks such as
+          resume screening and interview coordination. It ensures consistent evaluation of candidates while
+          improving recruiter efficiency and candidate experience.
+        </p>
+      </div>
+
+      <div class="project-sidebar fade fade-delay-1">
+        <div class="sidebar-card">
+          <h4>Tech Stack</h4>
+          <div class="tags" style="gap:8px">
+            <span class="tag">n8n</span>
+            <span class="tag">LLM</span>
+            <span class="tag">Google Drive API</span>
+            <span class="tag">Email API</span>
+            <span class="tag">Calendar API</span>
+            <span class="tag tag-neutral">Automation</span>
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>Links</h4>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <a href="#" target="_blank" class="btn btn-primary" style="justify-content:center;font-size:0.82rem">
+              View Workflow
+            </a>
+            <a href="../projects.html" class="btn btn-outline" style="justify-content:center;font-size:0.82rem">← All Projects</a>
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>Project Stats</h4>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div>
+              <div style="font-family:var(--mono);font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px">Automations</div>
+              <div style="color:var(--amber);font-size:1.2rem;font-family:var(--serif);font-weight:700">⚙ 12 Nodes</div>
+            </div>
+            <div>
+              <div style="font-family:var(--mono);font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px">Efficiency Gain</div>
+              <div style="font-size:1rem;font-weight:600;color:var(--text)">~70%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+  });
+</script>
+
+</body>
+</html>

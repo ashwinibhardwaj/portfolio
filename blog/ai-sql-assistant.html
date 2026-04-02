@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VS05EJC9LN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-VS05EJC9LN');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI SQL Assistant - Convert natural language into SQL queries instantly using LLMs and LangChain.">
+  <title>Blog · Ashwini Bhardwaj</title>
+
+  <link rel="icon" type="image/png" href="../static/assets/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../static/assets/favicon.svg" />
+  <link rel="shortcut icon" href="../static/assets/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../static/assets/apple-touch-icon.png" />
+  <link rel="manifest" href="../static/assets/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../static/base.js" defer></script>
+  <script src="../static/script.js" defer></script>
+</head>
+
+<body>
+
+<main id="blog-main">
+  <div class="container" style="padding-top:80px;color:var(--muted)">Loading…</div>
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+  const filename = window.location.pathname.split("/").pop().replace(".html", "");
+  const main = document.getElementById("blog-main");
+
+  try {
+    const blogs = await loadJSON("../data/blogs.json");
+    const blog = blogs.find(b => b.id === filename);
+
+    if (!blog) {
+      main.innerHTML = `
+        <div class="container">
+          <div class="empty" style="padding:120px 0">
+            <p>Post not found.</p>
+            <a href="../blog.html" class="btn btn-outline">← Back to Blog</a>
+          </div>
+        </div>`;
+      return;
+    }
+
+    document.title = `${blog.title} · Ashwini Bhardwaj`;
+
+    main.innerHTML = `
+      <div class="container">
+        <div class="blog-hero fade">
+          <div class="tags" style="margin-bottom:20px">
+            ${blog.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+          </div>
+
+          <h2>${blog.title}</h2>
+
+          <p style="font-size:1.1rem;color:var(--muted2);margin:16px 0 28px;line-height:1.7">
+            ${blog.description}
+          </p>
+
+          <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap">
+            <div style="display:flex;align-items:center;gap:10px">
+              <div style="width:36px;height:36px;border-radius:50%;background:var(--amber-glow);display:flex;align-items:center;justify-content:center">
+                👤
+              </div>
+              <div>
+                <div style="font-size:0.85rem;font-weight:500">Ashwini Bhardwaj</div>
+                <div style="font-size:0.75rem;color:var(--muted)">AI Developer</div>
+              </div>
+            </div>
+
+            <span class="reading-time">
+              ${blog.date} · 5 min read
+            </span>
+          </div>
+        </div>
+
+        <!-- BLOG CONTENT -->
+        <div class="blog-content fade">
+
+          <p>
+            I’ve always found SQL to be one of those tools that’s powerful, but slightly repetitive in practice.
+            You already know what you want but you still have to translate that intent into syntax every single time.
+          </p>
+
+          <p>
+            This project started with a simple thought:
+            <em>what if I could just ask the database questions, and it understands?</em>
+            That idea slowly turned into the AI SQL Assistant.
+          </p>
+
+          <h2>📖 Where It Started</h2>
+          <p>
+            Initially, this was just about converting natural language into SQL using an LLM.
+            Something small. Something experimental.
+          </p>
+
+          <p>
+            But the moment I started building it, I realized the real problem wasn’t generating SQL 
+            it was making the system reliable.
+          </p>
+
+          <p>
+            Queries break. Inputs are vague. Outputs aren’t always correct.
+            That’s where things got interesting.
+          </p>
+
+          <h2>💻 Building the Flow</h2>
+          <p>
+            Over time, the system evolved into a small pipeline:
+          </p>
+
+          <ul>
+            <li>Load a temporary database from a SQL dump</li>
+            <li>Convert plain English into a query</li>
+            <li>Execute it safely</li>
+            <li>Catch failures and retry</li>
+            <li>Return results in a usable format</li>
+          </ul>
+
+          <p>
+            It sounds simple but most of the effort went into handling everything that goes wrong in between.
+          </p>
+
+          <h2>⚙️ Stack Choices</h2>
+          <ul>
+            <li><strong>Flask</strong> - fast iteration, minimal overhead</li>
+            <li><strong>LangChain / LangGraph</strong> - structuring the reasoning flow</li>
+            <li><strong>Hugging Face LLMs</strong> - flexible model experimentation</li>
+            <li><strong>MySQL</strong> - controlled execution layer</li>
+          </ul>
+
+          <p>
+            The tools mattered less than how they were connected.
+            Most improvements came from refining the flow, not swapping models.
+          </p>
+
+          <h2>💡 What Actually Helped</h2>
+
+          <p>
+            The biggest shift came from adding feedback loops instead of chasing perfect outputs.
+          </p>
+
+          <ul>
+            <li>Let the system see its own errors</li>
+            <li>Retry with context</li>
+            <li>Keep execution constrained</li>
+            <li>Optimize for recovery, not perfection</li>
+          </ul>
+
+          <blockquote>
+            Systems feel “smart” when they recover well, not when they’re perfect.
+          </blockquote>
+
+          <h2>🔍 What I Took Away</h2>
+          <p>
+            This project changed how I think about LLM applications.
+            It’s not about prompting it’s about systems.
+          </p>
+
+          <p>
+            Reliability doesn’t come from better outputs.
+            It comes from handling failure well.
+          </p>
+
+          <p>
+            And once it starts working, something interesting happens
+            you stop thinking in SQL, and start thinking in questions again.
+          </p>
+
+          <h2>📂 Project</h2>
+          <p>
+            If you want to explore it:
+            <a href="https://github.com/ashwinibhardwaj/AI-SQL-ASSISTANT" target="_blank">
+              AI SQL Assistant on GitHub
+            </a>
+          </p>
+
+          <h2>What’s Next</h2>
+          <p>
+            I’m currently exploring evaluation and reliability figuring out how to measure whether
+            generated queries are actually correct, not just executable.
+          </p>
+
+        </div>
+      </div>
+    `;
+
+    // Fade animation
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add("visible");
+      });
+    }, { threshold: 0.08 });
+
+    main.querySelectorAll('.fade').forEach(el => obs.observe(el));
+
+  } catch (e) {
+    main.innerHTML = `
+      <div class="container">
+        <div class="empty" style="padding:120px 0">
+          <p>Could not load post.</p>
+          <a href="../blog.html" class="btn btn-outline">← Back to Blog</a>
+        </div>
+      </div>`;
+  }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VS05EJC9LN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-VS05EJC9LN');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ashwini Bhardwaj — AI Developer building intelligent systems, autonomous agents, and production-ready AI pipelines.">
+  <title>Projects · Ashwini Bhardwaj</title>
+
+  <link rel="icon" type="image/png" href="static/assets/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="static/assets/favicon.svg" />
+  <link rel="shortcut icon" href="static/assets/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="static/assets/apple-touch-icon.png" />
+  <link rel="manifest" href="static/assets/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="static/style.css">
+
+  <script src="static/base.js" defer></script>
+  <script src="static/script.js" defer></script>
+</head>
+<body>
+
+<main>
+<canvas id="fog"></canvas>
+
+<div class="container">
+  <div class="page-hero fade">
+    <div class="label">Portfolio</div>
+    <h1>All Projects</h1>
+    <p>A collection of AI systems, developer tools, and research experiments — built to solve real problems.</p>
+  </div>
+
+  <!-- ✅ UPDATED FILTER BAR -->
+  <div class="filter-bar fade">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="RAG">RAG</button>
+    <button class="filter-btn" data-filter="Agent">Agents</button>
+    <button class="filter-btn" data-filter="Automation">Automation</button>
+    <button class="filter-btn" data-filter="ML/DL">ML/DL</button>
+  </div>
+
+  <div id="projects-grid" class="projects-grid" style="margin-bottom:80px">
+    <div class="empty" style="padding:60px 0;color:var(--muted)">Loading projects…</div>
+  </div>
+</div>
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+  const grid = document.getElementById("projects-grid");
+
+  try {
+    const projects = await loadJSON("data/projects.json");
+
+    if (!projects.length) {
+      grid.innerHTML = '<div class="empty">No projects found.</div>';
+      return;
+    }
+
+    // ✅ Render projects
+    grid.innerHTML = projects.map((p, i) => `
+      <a href="project/${p.id}.html"
+         class="project-card fade"
+         data-tags="${p.tags.join(',')}"
+         style="text-decoration:none">
+
+        <span class="project-card-number">${String(i + 1).padStart(2, '0')}</span>
+
+        <h3>${p.title}</h3>
+        <p>${p.description}</p>
+
+        <div class="project-card-footer">
+          <div class="tags">
+            ${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+          </div>
+
+          <div class="card-arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+    `).join('');
+
+    // ✅ Fade animation
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add("visible");
+      });
+    }, { threshold: 0.08 });
+
+    grid.querySelectorAll('.fade').forEach(el => obs.observe(el));
+
+    // ✅ INIT FILTERS (UPDATED)
+    initProjectFilters();
+
+  } catch (e) {
+    grid.innerHTML = '<div class="empty">Could not load projects.</div>';
+  }
+});
+
+
+/* ✅ UPDATED FILTER FUNCTION */
+function initProjectFilters() {
+  const buttons = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll(".project-card");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+      const filter = btn.dataset.filter.toLowerCase();
+
+      // Active state
+      buttons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      cards.forEach(card => {
+        const tags = card.dataset.tags.toLowerCase();
+
+        if (filter === "all" || tags.includes(filter)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+
+    });
+  });
+}
+</script>
+
+</body>
+</html>
