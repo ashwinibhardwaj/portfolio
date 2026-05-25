@@ -10,11 +10,15 @@
      Works from root pages (index.html) and sub-pages (project/x.html).
      Detects depth by counting non-empty path segments.           */
   function root() {
-    const segs = window.location.pathname.split('/').filter(Boolean);
-    // On GitHub Pages the repo name is the first segment — skip it
-    // but keep traversal correct for both root and sub-folder pages.
-    const depth = segs.length > 0 && !segs[segs.length - 1].includes('.') ? segs.length : segs.length - 1;
-    return depth <= 1 ? '' : '../'.repeat(depth - 1);
+    const segs = window.location.pathname
+      .split('/')
+      .filter(Boolean);
+
+    if (segs.length && segs[segs.length - 1].includes('.')) {
+      segs.pop();
+    }
+
+    return '../'.repeat(segs.length);
   }
 
   const R = root(); // relative prefix: '' or '../'

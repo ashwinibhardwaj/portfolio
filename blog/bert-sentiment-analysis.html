@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VS05EJC9LN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-VS05EJC9LN');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fine-Tuning BERT for Sentiment Analysis using Hugging Face Transformers and PyTorch.">
+  <title>Blog · Ashwini Bhardwaj</title>
+
+  <link rel="icon" type="image/png" href="../static/assets/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../static/assets/favicon.svg" />
+  <link rel="shortcut icon" href="../static/assets/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../static/assets/apple-touch-icon.png" />
+  <link rel="manifest" href="../static/assets/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../static/base.js" defer></script>
+  <script src="../static/script.js" defer></script>
+</head>
+
+<body>
+
+<main id="blog-main">
+  <div class="container" style="padding-top:80px;color:var(--muted)">Loading…</div>
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+  const filename = window.location.pathname.split("/").pop().replace(".html", "");
+  const main = document.getElementById("blog-main");
+
+  try {
+    const blogs = await loadJSON("../data/blogs.json");
+    const blog = blogs.find(b => b.id === filename);
+
+    if (!blog) {
+      main.innerHTML = `
+        <div class="container">
+          <div class="empty" style="padding:120px 0">
+            <p>Post not found.</p>
+            <a href="../blog.html" class="btn btn-outline">← Back to Blog</a>
+          </div>
+        </div>`;
+      return;
+    }
+
+    document.title = `${blog.title} · Ashwini Bhardwaj`;
+
+    main.innerHTML = `
+      <div class="container">
+        <div class="blog-hero fade">
+          <div class="tags" style="margin-bottom:20px">
+            ${blog.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+          </div>
+
+          <h2>${blog.title}</h2>
+
+          <p style="font-size:1.1rem;color:var(--muted2);margin:16px 0 28px;line-height:1.7">
+            ${blog.description}
+          </p>
+
+          <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap">
+            <div style="display:flex;align-items:center;gap:10px">
+              <div style="width:36px;height:36px;border-radius:50%;background:var(--amber-glow);display:flex;align-items:center;justify-content:center">
+                👤
+              </div>
+              <div>
+                <div style="font-size:0.85rem;font-weight:500">Ashwini Bhardwaj</div>
+                <div style="font-size:0.75rem;color:var(--muted)">AI Developer</div>
+              </div>
+            </div>
+
+            <span class="reading-time">
+              ${blog.date} · 6 min read
+            </span>
+          </div>
+        </div>
+
+        <div class="blog-content fade">
+
+            <p>
+                Most machine learning tutorials make deep learning feel simple.
+                Load a dataset, fine-tune a model, print the accuracy, and everything looks solved.
+            </p>
+
+            <p>
+                But when I started building real NLP systems myself, I realized the difficult part isn’t running a model.
+                It’s understanding everything happening around it.
+            </p>
+
+            <p>
+                That realization became the foundation for this BERT Sentiment Analysis project.
+                I wanted to understand how modern NLP systems are actually built — from preprocessing to deployment.
+            </p>
+
+            <h2>Why I Chose BERT</h2>
+
+            <p>
+                Traditional NLP pipelines often struggle with context.
+                A sentence like:
+            </p>
+
+            <blockquote>
+                “The movie was not good.”
+            </blockquote>
+
+            <p>
+                can completely confuse simpler models because the meaning depends on surrounding words.
+            </p>
+
+            <p>
+                BERT solves this using contextual understanding through attention mechanisms.
+                Instead of processing words independently, it understands relationships between them.
+            </p>
+
+            <p>
+                That shift is what made Transformer models revolutionary for NLP tasks.
+            </p>
+
+            <h2>Building the Pipeline</h2>
+
+            <p>
+                I trained the model on the IMDb movie reviews dataset using Hugging Face Transformers and PyTorch.
+            </p>
+
+            <p>
+                Most of the work actually happened before training:
+            </p>
+
+            <ul>
+                <li>Tokenizing text using the BERT tokenizer</li>
+                <li>Handling sequence truncation and padding</li>
+                <li>Creating attention masks</li>
+                <li>Building efficient training batches</li>
+                <li>Fine-tuning pretrained Transformer weights</li>
+            </ul>
+
+            <p>
+                One thing I learned quickly was how important preprocessing becomes in NLP systems.
+                Small changes in data preparation can directly affect model behavior.
+            </p>
+
+            <h2>The Training Process</h2>
+
+            <p>
+                Fine-tuning a Transformer model taught me that deep learning is mostly about experimentation.
+            </p>
+
+            <p>
+                I tested different learning rates, batch sizes, optimizers, and evaluation strategies.
+                Some runs overfit quickly, while others performed well numerically but failed on edge cases.
+            </p>
+
+            <p>
+                That process changed how I think about machine learning entirely.
+                Strong models come from iteration, debugging, and understanding failure patterns.
+            </p>
+
+            <blockquote>
+                Building ML systems isn’t about getting one impressive metric.
+                It’s about understanding where the model breaks.
+            </blockquote>
+
+            <h2>Evaluation Beyond Accuracy</h2>
+
+            <p>
+                Early on, I focused heavily on accuracy.
+                But over time, I realized accuracy alone can hide major weaknesses.
+            </p>
+
+            <p>
+                I started exploring:
+            </p>
+
+            <ul>
+                <li>Precision</li>
+                <li>Recall</li>
+                <li>F1-score</li>
+                <li>Confusion matrices</li>
+            </ul>
+
+            <p>
+                The confusion matrix was especially useful because it revealed prediction patterns that raw accuracy completely missed.
+            </p>
+
+            <h2>Deployment & What I Learned</h2>
+
+            <p>
+                After training, I pushed the fine-tuned model to Hugging Face Hub for inference.
+                That made the project feel like a real deployable AI system instead of just another notebook experiment.
+            </p>
+
+            <p>
+                More importantly, this project completely changed how I think about AI engineering.
+            </p>
+
+            <p>
+                I learned that modern ML systems are not just about models.
+                Data quality, preprocessing, evaluation, debugging, and deployment matter just as much.
+            </p>
+
+            <blockquote>
+                Real machine learning starts after the model begins training.
+            </blockquote>
+
+            <h2>Project</h2>
+
+            <p>
+                You can explore the complete project here:
+                <a href="https://github.com/ashwinibhardwaj/Fine-Tuning-of-BERT-for-Sentiment-Classification" target="_blank">
+                Fine-Tuning of BERT for Sentiment Classification
+                </a>
+            </p>
+
+            </div>
+      </div>
+    `;
+
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add("visible");
+      });
+    }, { threshold: 0.08 });
+
+    main.querySelectorAll('.fade').forEach(el => obs.observe(el));
+
+  } catch (e) {
+    main.innerHTML = `
+      <div class="container">
+        <div class="empty" style="padding:120px 0">
+          <p>Could not load post.</p>
+          <a href="../blog.html" class="btn btn-outline">← Back to Blog</a>
+        </div>
+      </div>`;
+  }
+});
+</script>
+
+</body>
+</html>

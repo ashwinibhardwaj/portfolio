@@ -1,5 +1,15 @@
 [
   {
+    "id": "bert-sentiment-analysis",
+    "title": "BERT Sentiment Analysis",
+    "description": "Fine-tuned BERT model for IMDb sentiment classification with Hugging Face Transformers and PyTorch.",
+    "content": "Developed an end-to-end NLP pipeline for binary sentiment classification by fine-tuning the pretrained BERT transformer model on the IMDb dataset. Implemented tokenization, preprocessing, training, evaluation, and inference workflows using Hugging Face Transformers and PyTorch. Evaluated model performance using accuracy, precision, recall, and F1-score metrics, achieving strong classification results. Visualized outcomes with confusion matrices and deployed the trained model on Hugging Face Hub for public inference and accessibility.",
+    "tags": ["Python", "NLP","ML/DL", "Transformers", "BERT", "PyTorch", "HuggingFace"],
+    "github_link": "#",
+    "date": "2026-03-01"
+  },
+
+  {
     "id": "blog-writing-agent",
     "title": "Blog Writing Agent",
     "description": "Intelligent agent that generates detailed, high-quality blog posts from a given topic using automated research and structured workflows.",
