@@ -61,93 +61,158 @@ document.addEventListener("DOMContentLoaded", async () => {
       <div class="blog-content fade">
 
         <p>
-          This started pretty casually. I was reading through a technical article packed with dense terms,
-          and I kept breaking my flow just to look things up.
+          This project started pretty casually.
+          I was reading through a technical article packed with dense terminology,
+          and I kept interrupting myself just to search for explanations.
         </p>
 
         <p>
-          At some point, I caught myself thinking
-          <em>why isn’t there something that just explains this instantly, right here?</em>
+          Every few minutes, I’d switch tabs,
+          search a concept,
+          read a definition,
+          then come back and try to regain context.
         </p>
 
         <p>
-          That thought turned into <strong>Vocilite</strong>.
-        </p>
-
-        <h2>📖 The Idea</h2>
-        <p>
-          The goal wasn’t to build something complex. It was to remove friction.
-          I wanted a way to highlight any piece of text and instantly understand it without leaving the page.
+          Eventually I caught myself thinking:
+          <em>why isn’t there something that just explains this instantly, right where I’m reading?</em>
         </p>
 
         <p>
-          And then I thought if it can explain, why not also speak?
+          That idea eventually became <strong>Vocilite</strong>
+          a Chrome extension that explains highlighted text in simple language and can even read it aloud.
         </p>
 
-        <h2>💻 Building It Out</h2>
+        <h2>The Core Idea</h2>
+
         <p>
-          What started simple quickly became a system:
+          The goal wasn’t to build another chatbot.
+          It was to reduce friction while reading.
+        </p>
+
+        <p>
+          I wanted users to stay inside their workflow instead of constantly jumping between tabs,
+          articles, and search engines.
+        </p>
+
+        <p>
+          The interaction needed to feel lightweight:
+          highlight text,
+          click once,
+          and immediately understand what you’re reading.
+        </p>
+
+        <p>
+          Then I added voice support because sometimes listening is easier than reading
+          especially while multitasking or going through long explanations.
+        </p>
+
+        <h2>Building the Extension</h2>
+
+        <p>
+          What looked simple at first quickly turned into a complete pipeline.
         </p>
 
         <ul>
-          <li>Capture highlighted text from any webpage</li>
-          <li>Send it to a backend for processing</li>
-          <li>Generate a clean explanation using an LLM</li>
-          <li>Return and display it instantly</li>
-          <li>Optionally read it aloud</li>
+          <li>Capture highlighted text directly from webpages</li>
+          <li>Send the selected text to a backend service</li>
+          <li>Generate simplified explanations using an LLM</li>
+          <li>Display results instantly inside the extension UI</li>
+          <li>Convert responses into speech using browser APIs</li>
         </ul>
 
         <p>
-          The tricky part wasn’t getting it to work it was making it feel smooth.
+          The interesting part wasn’t just generating text.
+          It was making the entire interaction feel fast and natural.
         </p>
 
-        <h2>⚙️ Stack</h2>
+        <h2>Tech Stack</h2>
+
         <ul>
-          <li>Chrome Extension (frontend layer)</li>
-          <li>Flask backend</li>
-          <li>LangChain orchestration</li>
-          <li>Groq + LLaMA 3 for generation</li>
-          <li>Web Speech API for voice</li>
+          <li><strong>Chrome Extension</strong> for the frontend interaction layer</li>
+          <li><strong>Flask</strong> backend for request handling</li>
+          <li><strong>LangChain</strong> for orchestration and prompt flow</li>
+          <li><strong>Groq + LLaMA 3</strong> for low-latency generation</li>
+          <li><strong>Web Speech API</strong> for voice playback</li>
         </ul>
 
-        <h2>💡 What Made It Interesting</h2>
         <p>
-          The biggest challenge wasn’t AI it was polish.
+          One thing I learned quickly:
+          responsiveness matters a lot in browser tools.
+        </p>
+
+        <p>
+          Even small delays make the experience feel disconnected,
+          so optimizing latency became more important than adding extra features.
+        </p>
+
+        <h2>Challenges I Didn’t Expect</h2>
+
+        <p>
+          I originally assumed the difficult part would be the AI model itself.
+          Surprisingly, most of the work ended up being around usability and edge cases.
         </p>
 
         <ul>
-          <li>Cleaning output so speech sounds natural</li>
-          <li>Keeping explanations short but useful</li>
-          <li>Making the UI feel invisible, not intrusive</li>
-          <li>Handling edge cases in real-world text</li>
+          <li>Cleaning noisy webpage text before sending it to the model</li>
+          <li>Making explanations concise instead of overly verbose</li>
+          <li>Ensuring speech output sounded natural</li>
+          <li>Handling inconsistent formatting across websites</li>
+          <li>Keeping the extension lightweight and distraction-free</li>
         </ul>
 
         <blockquote>
-          Small UX details matter more than model quality in tools like this.
+          Good AI products feel simple on the surface because complexity is handled underneath.
         </blockquote>
 
-        <h2>🔍 What I Learned</h2>
+        <h2>What I Learned</h2>
+
         <p>
-          This project made one thing clear:
-          building AI features is easy building something people actually want to use is harder.
+          Vocilite taught me that building AI features is only a small part of building useful products.
         </p>
 
         <p>
-          The real work is in shaping the experience not just generating output.
+          The real challenge is designing interactions people genuinely enjoy using.
         </p>
 
-        <h2>📂 Project</h2>
         <p>
-          You can explore it here:
+          Small UX details ended up mattering more than model sophistication:
+          response speed,
+          readability,
+          clarity,
+          and how naturally the tool fits into existing workflows.
+        </p>
+
+        <p>
+          This project also pushed me deeper into thinking about practical AI systems
+          not just prompts and models,
+          but product design,
+          latency,
+          reliability,
+          and user experience.
+        </p>
+
+        <h2>Project</h2>
+
+        <p>
+          You can explore the full project here:
           <a href="https://github.com/ashwinibhardwaj/TextExplainer_Vocilite" target="_blank">
             Vocilite on GitHub
           </a>
         </p>
 
         <h2>What’s Next</h2>
+
         <p>
-          I’m continuing to refine it especially around voice quality and multi-language support.
-          There’s a lot more to explore here.
+          I’m continuing to improve the project,
+          especially around voice quality,
+          multilingual support,
+          and smarter context-aware explanations.
+        </p>
+
+        <p>
+          The long-term idea is simple:
+          make understanding information feel effortless.
         </p>
 
       </div>
