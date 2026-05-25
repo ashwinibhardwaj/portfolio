@@ -2,7 +2,7 @@
   {
     "id": "bert-sentiment-analysis",
     "title": "Fine-Tuning BERT for Sentiment Analysis: What Building This Project Actually Taught Me",
-    "description": "A deep dive into building a Transformer-based sentiment analysis system using Hugging Face, PyTorch, and BERT — and the lessons learned while training real NLP models.",
+    "description": "A deep dive into building a Transformer-based sentiment analysis system using Hugging Face, PyTorch, and BERT and the lessons learned while training real NLP models.",
     "content": "Most NLP tutorials stop at running a model. I wanted to understand what actually happens when you train, fine-tune, evaluate, and deploy a Transformer model in a real workflow. This project started as an exploration into sentiment analysis using BERT, but quickly turned into a deeper learning experience around deep learning pipelines, tokenization, evaluation metrics, overfitting, and deployment. Using Hugging Face Transformers and PyTorch, I built a complete sentiment classification system trained on IMDb reviews and deployed the fine-tuned model for inference.",
     "tags": ["NLP", "BERT", "Transformers", "PyTorch"],
     "date": "2026-03-01"
