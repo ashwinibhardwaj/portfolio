@@ -125,7 +125,7 @@
           </div>
 
           <div class="footer-tagline">
-            Building the future with AI — one model at a time.
+            Code • Learn • Build • Improve
           </div>
         </div>
 

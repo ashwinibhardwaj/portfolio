@@ -1,5 +1,15 @@
 [
   {
+    "id": "prompt-safety-finetuning",
+    "title": "Prompt Safety Fine-Tuning",
+    "description": "Fine-tuned an instruction-tuned LLM using QLoRA to classify prompts as Benign, Harmful, or Jailbreak for AI safety applications.",
+    "content": "Fine-tuned an instruction-tuned language model using QLoRA, PEFT, and Unsloth on a curated subset of the WildJailbreak dataset for multi-class prompt safety classification. Implemented an end-to-end training pipeline including dataset preprocessing, supervised fine-tuning, evaluation, and inference. Optimized training for limited GPU resources with 4-bit quantization and LoRA adapters. Deployed the merged model to Hugging Face Hub and built an interactive Gradio application for real-time prompt safety prediction.",
+    "tags": ["Python", "LLM", "ML/DL", "Fine-Tuning", "PEFT", "Unsloth", "Transformers", "HuggingFace", "PyTorch"],
+    "github_link": "https://github.com/ashwinibhardwaj/prompt-safety-finetuning",
+    "date": "2026-07-01"
+  },
+
+  {
     "id": "bert-sentiment-analysis",
     "title": "BERT Sentiment Analysis",
     "description": "Fine-tuned BERT model for IMDb sentiment classification with Hugging Face Transformers and PyTorch.",
