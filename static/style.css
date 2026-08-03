@@ -1767,7 +1767,6 @@ textarea.form-control {
   }
 
   .cinematic-title {
-    margin-top: 20px;
     font-size: clamp(2rem, 9vw, 3rem);
     letter-spacing: 0.04em;
     /* Ensure it never escapes the viewport */
@@ -1780,17 +1779,11 @@ textarea.form-control {
   .hero-actions { gap: 10px; margin-bottom: 52px; }
   .hero-actions .btn { padding: 11px 20px; font-size: 0.83rem; }
 
-  .hero-stats {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    padding-top: 32px;
-    width: 100%;
-  }
-
-  .hero-stats > * {
-    width: 100%;
-  }
+  .hero-stats { 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 22px; 
+    padding-top: 32px; }
 
   .stat-item {
     text-align: center;
