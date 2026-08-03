@@ -1767,6 +1767,7 @@ textarea.form-control {
   }
 
   .cinematic-title {
+    margin-top: 20px;
     font-size: clamp(2rem, 9vw, 3rem);
     letter-spacing: 0.04em;
     /* Ensure it never escapes the viewport */
