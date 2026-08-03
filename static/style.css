@@ -1767,7 +1767,7 @@ textarea.form-control {
   }
 
   .cinematic-title {
-    font-size: clamp(1.55rem, 7.5vw, 2.4rem);
+    font-size: clamp(2rem, 9vw, 3rem);
     letter-spacing: 0.04em;
     /* Ensure it never escapes the viewport */
     max-width: 100%;
@@ -1780,10 +1780,15 @@ textarea.form-control {
   .hero-actions .btn { padding: 11px 20px; font-size: 0.83rem; }
 
   .hero-stats {
-    flex-direction: column;
-    align-items: center;
-    gap: 22px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
     padding-top: 32px;
+    width: 100%;
+  }
+
+  .hero-stats > * {
+    width: 100%;
   }
 
   .stat-item {
@@ -1877,7 +1882,7 @@ textarea.form-control {
   }
 
   .cinematic-title {
-    font-size: clamp(1.3rem, 8vw, 1.75rem);
+    font-size: clamp(1.55rem, 8vw, 2.4rem);
     letter-spacing: 0.02em;
   }
 
