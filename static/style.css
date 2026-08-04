@@ -1774,9 +1774,9 @@ textarea.form-control {
     overflow-wrap: break-word;
   }
 
-  .hero h1 { font-size: clamp(1.6rem, 7vw, 2.2rem);margin-top: 16px; margin-bottom: 32px; }
+  .hero h1 { font-size: clamp(1.6rem, 7vw, 2.2rem);margin-top: 32px; margin-bottom: 32px; }
   .hero-sub { font-size: 0.9rem; margin-bottom: 32px; }
-  .hero-actions { gap: 10px; margin-bottom: 52px; }
+  .hero-actions { gap: 10px; margin-bottom: 64px; }
   .hero-actions .btn { padding: 11px 20px; font-size: 0.83rem; }
 
   .hero-stats {
