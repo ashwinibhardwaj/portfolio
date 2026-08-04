@@ -1675,7 +1675,7 @@ textarea.form-control {
 /* ============================================================
    RESPONSIVE — TABLET  ≤ 960px
    ============================================================ */
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
   .hero         { padding: 88px var(--px) 68px; }
   .hero-stats   { gap: 28px; }
 
@@ -1722,7 +1722,7 @@ textarea.form-control {
 /* ============================================================
    RESPONSIVE — MOBILE  ≤ 640px
    ============================================================ */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   /* Nav */
   .nav {
     background: var(--bg);
@@ -1777,8 +1777,8 @@ textarea.form-control {
 
   .hero h1 { font-size: clamp(1.6rem, 7vw, 2.2rem);margin-top: 56px; margin-bottom: 28px; }
   .hero-sub { font-size: 0.9rem; margin-bottom: 32px; }
-  .hero-actions { gap: 10px; margin-bottom: 52px; display:block}
-  .hero-actions .btn { padding: 11px 20px; font-size: 0.83rem; }
+  .hero-actions { gap: 10px; margin-bottom: 52px;}
+  .hero-actions .btn { padding: 11px 20px; font-size: 0.83rem;}
 
   .hero-stats {
     display: grid;
@@ -1877,7 +1877,7 @@ textarea.form-control {
 /* ============================================================
    RESPONSIVE — VERY SMALL  ≤ 390px
    ============================================================ */
-@media (max-width: 390px) {
+@media (max-width: 480px) {
   .hero {
     padding: 52px var(--px) 40px;
   }
