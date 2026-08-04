@@ -1767,7 +1767,7 @@ textarea.form-control {
   }
 
   .cinematic-title {
-    font-size: clamp(2rem, 9vw, 3rem);
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
     letter-spacing: 0.04em;
     /* Ensure it never escapes the viewport */
     max-width: 100%;
@@ -1883,7 +1883,7 @@ textarea.form-control {
   }
 
   .cinematic-title {
-    font-size: clamp(1.55rem, 8vw, 2.4rem);
+    font-size: 1.8rem;
     letter-spacing: 0.02em;
   }
 
