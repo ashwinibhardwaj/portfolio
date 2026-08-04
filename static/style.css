@@ -1883,7 +1883,7 @@ textarea.form-control {
   }
 
   .cinematic-title {
-    font-size: 1.8rem;
+    font-size: clamp(1.4rem, 6.5vw, 2rem);
     letter-spacing: 0.02em;
   }
 
