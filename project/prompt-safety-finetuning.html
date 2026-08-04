@@ -1,284 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <! Google tag (gtag.js)>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=GVS05EJC9LN"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'GVS05EJC9LN');
-        </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VS05EJC9LN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-VS05EJC9LN');
+  </script>
 
-        <meta charset="UTF8">
-        <meta name="viewport" content="width=deviceWidth, initialScale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Prompt Safety Classifier - QLoRA fine-tuned LLM for benign/harmful/jailbreak prompt classification.">
+  <title>Prompt Safety Classifier · Ashwini Bhardwaj</title>
 
-        <meta name="description"
-            content="Prompt Safety FineTuning  FineTuned an instructionTuned LLM using QLoRA for prompt safety classification into Benign, Harmful, and Jailbreak categories.">
+  <link rel="icon" type="image/png" href="../static/assets/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../static/assets/favicon.svg" />
+  <link rel="shortcut icon" href="../static/assets/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../static/assets/apple-touch-icon.png" />
+  <link rel="manifest" href="../static/assets/site.webmanifest" />
 
-        <title>Prompt Safety FineTuning · Ashwini Bhardwaj</title>
-
-        <link rel="icon" type="image/png" href="../static/assets/favicon96x96.png" sizes="96x96" />
-        <link rel="icon" type="image/svg+xml" href="../static/assets/favicon.svg" />
-        <link rel="shortcut icon" href="../static/assets/favicon.ico" />
-        <link rel="appleTouchIcon" sizes="180x180" href="../static/assets/appleTouchIcon.png" />
-        <link rel="manifest" href="../static/assets/site.webmanifest" />
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-        <link rel="stylesheet" href="../static/style.css">
-
-        <script src="../static/base.js" defer></script>
-        <script src="../static/script.js" defer></script>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../static/base.js" defer></script>
+  <script src="../static/script.js" defer></script>
 </head>
-
 <body>
-    <canvas id="fog"></canvas>
-    <main id="projectMain">
-        <div class="container">
-            <div class="projectHero fade">
-                <div class="projectHeroInner">
-                    <div class="tags" style="marginBottom:20px">
-                        <span class="tag">Python</span>
-                        <span class="tag">LLM</span>
-                        <span class="tag">QLoRA</span>
-                        <span class="tag">PEFT</span>
-                        <span class="tag">Unsloth</span>
-                        <span class="tag">Transformers</span>
-                        <span class="tag">Hugging Face</span>
-                        <span class="tag">AI Safety</span>
-
-                    </div>
-                    <h1>Prompt Safety FineTuning</h1>
-                    <p>FineTuned an instructionTuned Large Language Model using QLoRA to classify prompts as
-                        <strong>Benign</strong>, <strong>Harmful</strong>, or <strong>Jailbreak</strong> for AI safety
-                        applications.</p>
-                    <div class="projectMeta">
-                        <div class="projectMetaItem">
-                            <span class="projectMetaLabel">Published</span>
-                            <span class="projectMetaValue">JUL 2026</span>
-                        </div>
-                        <div class="projectMetaItem">
-                            <span class="projectMetaLabel">Category</span>
-                            <span class="projectMetaValue">LLM FineTuning / AI Safety</span>
-                        </div>
-                        <div class="projectMetaItem">
-                            <span class="projectMetaLabel">Status</span>
-                            <span class="projectMetaValue" style="color:var(Amber)">● Completed</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="projectLayout">
-                <div class="projectContent fade">
-                    <h2>Overview</h2>
-
-                    <p>
-                        This project focuses on improving the safety of Large Language Models by fineTuning an
-                        instructionTuned model for prompt safety classification. The model predicts whether an incoming
-                        prompt belongs to one of three categories:
-                        <strong>Benign</strong>, <strong>Harmful</strong>, or <strong>Jailbreak</strong>.
-                    </p>
-
-                    <p>
-                        The model was trained on a curated subset of the <strong>WildJailbreak</strong> dataset using
-                        parameterEfficient fineTuning with <strong>QLoRA</strong>, <strong>PEFT</strong>, and
-                        <strong>Unsloth</strong>. Training was optimized for limited GPU resources using 4Bit
-                        quantization while maintaining strong inference performance.
-                    </p>
-
-                    <h2>Technical Architecture</h2>
-
-                    <p>
-                        A complete LLM fineTuning pipeline was implemented, covering dataset preprocessing, supervised
-                        fineTuning, evaluation, inference, and deployment to Hugging Face Hub.
-                    </p>
-
-                    <ul>
-
-                        <li>FineTuned an instructionTuned LLM using QLoRA and LoRA adapters</li>
-
-                        <li>Implemented parameterEfficient training using PEFT and Unsloth</li>
-
-                        <li>Used 4Bit quantization for memoryEfficient GPU training</li>
-
-                        <li>Prepared and cleaned the WildJailbreak dataset for supervised learning</li>
-
-                        <li>Built an inference pipeline for prompt safety prediction</li>
-
-                        <li>Merged LoRA adapters into the base model for deployment</li>
-
-                        <li>Published the trained model on Hugging Face Hub</li>
-
-                        <li>Developed a Gradio application for realTime prompt classification</li>
-
-                    </ul>
-
-                    <h2>Training Pipeline</h2>
-
-                    <p>
-                        The complete workflow consisted of:
-                    </p>
-
-                    <ul>
-
-                        <li>Dataset preprocessing and label preparation</li>
-
-                        <li>Instruction formatting for supervised fineTuning</li>
-
-                        <li>QLoRABased training with PEFT</li>
-
-                        <li>Evaluation on unseen validation prompts</li>
-
-                        <li>Adapter merging for standalone inference</li>
-
-                        <li>Deployment to Hugging Face Hub</li>
-
-                        <li>Interactive Gradio demo for public usage</li>
-
-                    </ul>
-
-                    <h2>Results</h2>
-
-                    <p>
-                        The resulting model successfully classifies prompts into three safety categories while requiring
-                        only a fraction of the trainable parameters compared to full fineTuning. The project
-                        demonstrates practical experience with modern LLM fineTuning techniques, efficient GPU
-                        utilization, model deployment, and AI safety workflows.
-                    </p>
-
-                </div>
-
-                <div class="projectSidebar fade fadeDelay1">
-
-                    <div class="sidebarCard">
-
-                        <h4>Tech Stack</h4>
-
-                        <div class="tags" style="gap:8px">
-
-                            <span class="tag" style="marginBottom:4px">Python</span>
-                            <span class="tag" style="marginBottom:4px">Transformers</span>
-                            <span class="tag" style="marginBottom:4px">PyTorch</span>
-                            <span class="tag" style="marginBottom:4px">QLoRA</span>
-                            <span class="tag" style="marginBottom:4px">PEFT</span>
-                            <span class="tag" style="marginBottom:4px">Unsloth</span>
-                            <span class="tag" style="marginBottom:4px">Gradio</span>
-                            <span class="tag tagNeutral">LLM</span>
-                            <span class="tag tagNeutral">AI Safety</span>
-
-                        </div>
-
-                    </div>
-
-                    <div class="sidebarCard">
-
-                        <h4>Links</h4>
-
-                        <div style="display:flex;flexDirection:column;gap:10px">
-
-                            <a href="https://github.com/ashwinibhardwaj/promptSafetyFinetuning" target="Blank"
-                                class="btn btnPrimary" style="justifyContent:center;fontSize:0.82rem">
-
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682.217.682.483 0.237.008.868.0131.7032.782.6053.3691.3433.3691.343.4541.1581.111.4661.111.466.908.62.069.608.069.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092.647.351.088.6361.3382.22.2534.5551.1134.5554.951 01.093.391.988 1.0292.688.103.253.4461.272.0982.65 0 0 .84.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.9091.296 2.7471.027 2.7471.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.8482.339 4.6954.566 4.943.359.309.678.92.678 1.855 0 1.338.012 2.419.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
-                                </svg>
-
-                                View on GitHub
-
-                            </a>
-
-                            <a href="https://huggingface.co/ashwini10521/promptSafetyClassification" target="Blank"
-                                class="btn btnOutline" style="justifyContent:center;fontSize:0.82rem">
-                                View on Hugging Face
-                            </a>
-
-                            <a href="../projects.html" class="btn btnOutline"
-                                style="justifyContent:center;fontSize:0.82rem">
-                                ← All Projects
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                    <div class="sidebarCard">
-
-                        <h4>Project Stats</h4>
-
-                        <div style="display:flex;flexDirection:column;gap:14px">
-
-                            <div>
-
-                                <div
-                                    style="fontFamily:var(Mono);fontSize:0.7rem;color:var(Muted);textTransform:uppercase;letterSpacing:0.1em;marginBottom:4px">
-                                    Classes
-                                </div>
-
-                                <div style="color:var(Amber);fontSize:1.2rem;fontFamily:var(Serif);fontWeight:700">
-                                    3
-                                </div>
-
-                            </div>
-
-                            <div>
-
-                                <div
-                                    style="fontFamily:var(Mono);fontSize:0.7rem;color:var(Muted);textTransform:uppercase;letterSpacing:0.1em;marginBottom:4px">
-                                    Training Method
-                                </div>
-
-                                <div style="fontSize:1rem;fontWeight:600;color:var(Text)">
-                                    QLoRA + PEFT
-                                </div>
-
-                            </div>
-
-                            <div>
-
-                                <div
-                                    style="fontFamily:var(Mono);fontSize:0.7rem;color:var(Muted);textTransform:uppercase;letterSpacing:0.1em;marginBottom:4px">
-                                    Deployment
-                                </div>
-
-                                <div style="fontSize:1rem;fontWeight:600;color:var(Text)">
-                                    Hugging Face + Gradio
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+<canvas id="fog"></canvas>
+
+<main id="project-main">
+  <div class="container">
+    <div class="project-hero fade">
+      <div class="project-hero-inner">
+
+        <div class="tags" style="margin-bottom:20px">
+          <span class="tag">Python</span>
+          <span class="tag">LLM</span>
+          <span class="tag">QLoRA</span>
+          <span class="tag">PEFT</span>
+          <span class="tag">Unsloth</span>
+          <span class="tag">HuggingFace</span>
         </div>
 
-    </main>
+        <h1>Prompt Safety Classifier</h1>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
+        <p>
+          QLoRA fine-tuned LLM guardrail model that classifies prompts as benign, harmful, or jailbreak, trained end-to-end on a single free-tier T4 GPU.
+        </p>
 
-            const obs = new IntersectionObserver(entries => {
+        <div class="project-meta">
+          <div class="project-meta-item">
+            <span class="project-meta-label">Published</span>
+            <span class="project-meta-value">JUL 2026</span>
+          </div>
 
-                entries.forEach(e => {
-                    if (e.isIntersecting) e.target.classList.add("visible");
-                });
+          <div class="project-meta-item">
+            <span class="project-meta-label">Category</span>
+            <span class="project-meta-value">LLM Safety / Fine-Tuning</span>
+          </div>
 
-            }, { threshold: 0.08 });
+          <div class="project-meta-item">
+            <span class="project-meta-label">Status</span>
+            <span class="project-meta-value" style="color:var(--amber)">● Completed</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+    <div class="project-layout">
 
-        });
-    </script>
+      <div class="project-content fade">
+
+        <h2>Overview</h2>
+        <p>
+          Built an end-to-end LLM guardrail classifier by fine-tuning <strong>Llama-3.2-1B-Instruct</strong> with QLoRA (4-bit quantization, LoRA rank 16) using Unsloth and TRL's SFTTrainer, entirely on a single Colab T4 GPU. The task was framed as generative classification in the style of Meta's Llama Guard: given a system prompt defining the taxonomy, the model outputs a single label token - <strong>benign</strong>, <strong>harmful</strong>, or <strong>jailbreak</strong> instead of using a separate classification head.
+        </p>
+
+        <p>
+          The model was trained on a stratified, deduplicated sample of a 150k-row labeled prompt dataset and benchmarked against a zero-shot baseline of the same base model with no fine-tuning. The fine-tuned model reached 0.99 F1 across all three classes, while the zero-shot baseline failed to follow the required single-word output format on more than half of its responses.
+        </p>
+
+        <h2>Technical Architecture</h2>
+
+        <p>
+          The system was designed around a resource-constrained fine-tuning pipeline optimized for free-tier GPU limits, with an emphasis on rigorous, leakage-checked evaluation rather than a single headline metric.
+        </p>
+
+        <ul>
+          <li>Fine-tuned <strong>Llama-3.2-1B-Instruct</strong> via QLoRA (4-bit NF4 base weights, LoRA adapters in fp16)</li>
+          <li>Used <strong>Unsloth</strong> for memory-efficient training and <strong>TRL's SFTTrainer</strong> with loss masked to the assistant turn only</li>
+          <li>Framed classification generatively (Llama-Guard style) rather than with a classification head</li>
+          <li>Deduplicated training data and ran a near-duplicate check between train and test splits to validate reported metrics</li>
+          <li>Benchmarked against a zero-shot baseline of the un-fine-tuned base model on identical prompts</li>
+          <li>Diagnosed and fixed evaluation pitfalls, including truncated baseline generations and a label-parsing regex bug</li>
+          <li>Published the LoRA adapter with a documented model card to Hugging Face Hub, alongside an interactive Gradio demo</li>
+        </ul>
+
+        <h2>Results &amp; Performance</h2>
+
+        <p>
+          The fine-tuned model achieved strong, well-generalized classification performance on a held-out test set, with a large margin over the zero-shot baseline.
+        </p>
+
+        <ul>
+          <li><strong>Overall Accuracy:</strong> ~94%</li>
+          <li><strong>F1 Score (macro):</strong> 0.99</li>
+          <li><strong>Precision:</strong> 0.98–1.00 across classes</li>
+          <li><strong>Recall:</strong> 0.99–1.00 across classes</li>
+          <li><strong>Zero-shot baseline macro F1:</strong> ~0.24, with 55% of responses failing to follow the output format</li>
+        </ul>
+
+        <p>
+          This project demonstrates practical experience with parameter-efficient fine-tuning (PEFT/QLoRA), resource-constrained training on consumer-tier GPUs, rigorous ML evaluation methodology, and end-to-end deployment of a fine-tuned LLM.
+        </p>
+      </div>
+
+      <div class="project-sidebar fade fade-delay-1">
+
+        <div class="sidebar-card">
+          <h4>Tech Stack</h4>
+          <div class="tags" style="gap:8px">
+            <span class="tag" style="margin-bottom:4px">Python</span>
+            <span class="tag" style="margin-bottom:4px">PyTorch</span>
+            <span class="tag" style="margin-bottom:4px">Unsloth</span>
+            <span class="tag" style="margin-bottom:4px">TRL</span>
+            <span class="tag" style="margin-bottom:4px">PEFT / QLoRA</span>
+            <span class="tag" style="margin-bottom:4px">HuggingFace</span>
+            <span class="tag tag-neutral">LLM</span>
+            <span class="tag tag-neutral">LLM Safety</span>
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>Links</h4>
+          <div style="display:flex;flex-direction:column;gap:10px">
+
+            <a href="https://github.com/ashwinibhardwaj/prompt-safety-finetuning" target="_blank" class="btn btn-primary" style="justify-content:center;font-size:0.82rem">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              View on GitHub
+            </a>
+
+            <a href="https://huggingface.co/ashwini10521/prompt-safety-classifier-lora" target="_blank" class="btn btn-outline" style="justify-content:center;font-size:0.82rem">
+              View on Hugging Face
+            </a>
+
+            <a href="../projects.html" class="btn btn-outline" style="justify-content:center;font-size:0.82rem">
+              ← All Projects
+            </a>
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>Project Stats</h4>
+          <div style="display:flex;flex-direction:column;gap:14px">
+
+            <div>
+              <div style="font-family:var(--mono);font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px">
+                Accuracy
+              </div>
+              <div style="color:var(--amber);font-size:1.2rem;font-family:var(--serif);font-weight:700">
+                ~94%
+              </div>
+            </div>
+
+            <div>
+              <div style="font-family:var(--mono);font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:4px">
+                Classes
+              </div>
+              <div style="font-size:1rem;font-weight:600;color:var(--text)">
+                3
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add("visible");
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+  });
+</script>
 
 </body>
-
 </html>
