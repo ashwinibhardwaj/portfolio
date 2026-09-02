@@ -78,8 +78,8 @@
   nav.innerHTML = `
     <div class="nav-inner">
 
-      <a href="${R}index.html" class="nav-logo">
-        𒋻
+      <a href="${R}index.html" class="nav-logo" style="font-weight: 100;text-shadow: 0 0 10px rgba(255, 255, 255, 0.81);">
+        𒋻𒁀
       </a>
 
       <div class="nav-links">
@@ -120,8 +120,8 @@
       <div class="footer-top">
 
         <div>
-          <div class="footer-logo">
-            𒋻
+          <div class="footer-logo" style="font-weight: 100;">
+            𒋻𒁀
           </div>
 
           <div class="footer-tagline">
