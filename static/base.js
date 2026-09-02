@@ -79,7 +79,7 @@
     <div class="nav-inner">
 
       <a href="${R}index.html" class="nav-logo">
-        Ashwini<span>.</span>
+        𒋻
       </a>
 
       <div class="nav-links">
@@ -121,7 +121,7 @@
 
         <div>
           <div class="footer-logo">
-            Ashwini<span>.</span>
+            𒋻
           </div>
 
           <div class="footer-tagline">
