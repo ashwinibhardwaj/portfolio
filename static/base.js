@@ -88,9 +88,17 @@
         <a href="${R}blog.html">Blog</a>
         <a href="${R}about.html">About</a>
 
+        <a href="${R}static/assets/Ashwini_Bhardwaj_Resume.pdf" class="nav-cta" target="_blank">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+          </svg>
+           Resume
+        </a>
+
         <a href="${R}contact.html" class="nav-cta">
           Get in Touch
         </a>
+        
       </div>
 
       <div class="nav-toggle" aria-label="Menu">
@@ -138,6 +146,9 @@
             <a href="${R}projects.html">Projects</a>
             <a href="${R}blog.html">Blog</a>
             <a href="${R}about.html">About</a>
+            <a href="${R}static/assets/Ashwini_Bhardwaj_Resume.pdf" target="_blank">
+              Resume
+            </a>
           </div>
 
           <div class="footer-col">

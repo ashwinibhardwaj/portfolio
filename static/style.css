@@ -1906,7 +1906,5 @@ textarea.form-control {
   .blog-card-body { padding: 14px; }
   .featured-card  { padding: 16px; }
 
-  .footer-col {
-    grid-template-columns: 1fr;
-  }
+  
 }
